@@ -2,8 +2,9 @@ import React from 'react';
 import { Statistics } from './Statistics';
 import Stopwatch from './Stopwatch';
 import PropTypes from 'prop-types'
+import {connect} from "react-redux";
 
-export const Header = ({title,players}) => {
+const Header = ({title,players}) => {
   // console.log(props);
   // const {title,players} = props;  //Destructing props
   return (
@@ -28,3 +29,9 @@ Header.defaultProps = {
   title:'Default Title',
   
 }
+
+const mapStateToProps = (state) => ({
+  title:state.playerReducer.title
+})
+
+export default connect(mapStateToProps)(Header)
