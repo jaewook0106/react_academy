@@ -1,8 +1,8 @@
 import React from 'react';
 import Counter from './Counter'
 
-
-export class Player extends React.PureComponent{
+// React.PureComponent
+export class Player extends React.Component{
   render(){
     console.log(this.props.name,'redered');
     const {id,removePlayer,changeScore,score,name} = this.props;
