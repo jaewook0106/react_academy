@@ -58,7 +58,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="scoreboard">
-        <Header title="header react" players={this.state.player} />
+        <Header title="React" players={this.state.player} />
         {
           this.state.player.map(player =>(
             <Player 

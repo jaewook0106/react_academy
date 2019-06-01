@@ -1,8 +1,17 @@
 import React from 'react';
-import Counter from './Counter'
+import {Counter} from './Counter'
+import PropTypes from 'prop-types'
 
 // React.PureComponent
 export class Player extends React.Component{
+  static propTypes = {
+    removePlayer:PropTypes.func,
+    changeScore:PropTypes.func,
+    id:PropTypes.number,
+    score:PropTypes.number,
+    name:PropTypes.string.isRequired // isRequired 값이 존재 여부
+  }
+
   render(){
     console.log(this.props.name,'redered');
     const {id,removePlayer,changeScore,score,name} = this.props;
@@ -30,8 +39,6 @@ export class Player extends React.Component{
     return nextProps.score !== this.props.score;
   }
 } 
-
-
 
 
 
