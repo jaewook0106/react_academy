@@ -23,16 +23,16 @@ class App extends React.Component{
     // prevState (state상태값 가져온다)  
   }
 
-  handleAddPlayr = (name)=>{
-    console.log(name)
-    this.setState(prevState => ({
-      player: [...prevState.player, {name, score:0,id:++this.maxId}]
-    }))
+  // handleAddPlayr = (name)=>{
+  //   console.log(name)
+  //   this.setState(prevState => ({
+  //     player: [...prevState.player, {name, score:0,id:++this.maxId}]
+  //   }))
 
     
 
-    //short hand property : key와 value가 같을 경우 하나로 쓴다
-  }
+  //   //short hand property : key와 value가 같을 경우 하나로 쓴다
+  // }
 
   handleChangeScore = (id, delta) => {  
     console.log(id, delta)

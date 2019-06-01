@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {addPlayer} from '../redux/actions'
+import { connect } from 'react-redux';
 
 class AddPlayerForm extends React.Component{
 
@@ -56,4 +58,9 @@ class AddPlayerForm extends React.Component{
 
 }
 
-export default AddPlayerForm
+const mapActionToProps = (dispatch) => ({
+  addPlayer:(name) => dispatch(addPlayer(name))
+})
+
+
+export default connect(null,mapActionToProps)(AddPlayerForm)
